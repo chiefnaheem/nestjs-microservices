@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  auth: 
+    build:
+      context: .
+      dockerfile: ./apps/auth/Dockerfile
+      target: development
+    command: yarn start:dev auth
+    env_file:
+      - ./apps/auth/.env
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - '15001:15001'
+
+  users: 
+    build:
+      context: .
+      dockerfile: ./apps/users/Dockerfile
+      target: development
+    command: yarn start:dev users
+    env_file:
+      - ./apps/auth/.env
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - '15002:15002'

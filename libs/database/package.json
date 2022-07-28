@@ -1,0 +1,21 @@
+{
+  "name": "@acme/prisma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prisma:migrate:auth": "prisma migrate dev --schema prisma/auth.schema.prisma",
+    "prisma:migrate:user": "prisma migrate dev --schema prisma/user.schema.prisma",
+    "prisma:migrate": "npm run prisma:migrate:auth && npm run prisma:migrate:user"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^4.1.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.1.0"
+  }
+}

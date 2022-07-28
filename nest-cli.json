@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/auth/src",
+  "monorepo": true,
+  "root": "apps/auth",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/auth/tsconfig.app.json"
+  },
+  "projects": {
+    "auth": {
+      "type": "application",
+      "root": "apps/auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    },
+    "users": {
+      "type": "application",
+      "root": "apps/users",
+      "entryFile": "main",
+      "sourceRoot": "apps/users/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users/tsconfig.app.json"
+      }
+    },
+    "common": {
+      "type": "library",
+      "root": "libs/common",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    },
+    "database": {
+      "type": "library",
+      "root": "libs/database",
+      "entryFile": "index",
+      "sourceRoot": "libs/database/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/database/tsconfig.lib.json"
+      }
+    },
+    "utilities": {
+      "type": "application",
+      "root": "apps/utilities",
+      "entryFile": "main",
+      "sourceRoot": "apps/utilities/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/utilities/tsconfig.app.json"
+      }
+    },
+    "easypay": {
+      "type": "application",
+      "root": "apps/easypay",
+      "entryFile": "main",
+      "sourceRoot": "apps/easypay/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/easypay/tsconfig.app.json"
+      }
+    },
+    "loan": {
+      "type": "application",
+      "root": "apps/loan",
+      "entryFile": "main",
+      "sourceRoot": "apps/loan/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/loan/tsconfig.app.json"
+      }
+    },
+    "savings": {
+      "type": "application",
+      "root": "apps/savings",
+      "entryFile": "main",
+      "sourceRoot": "apps/savings/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/savings/tsconfig.app.json"
+      }
+    },
+    "investment": {
+      "type": "application",
+      "root": "apps/investment",
+      "entryFile": "main",
+      "sourceRoot": "apps/investment/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/investment/tsconfig.app.json"
+      }
+    }
+  }
+}
